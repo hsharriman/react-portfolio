@@ -1,0 +1,307 @@
+@import url(index.css);
+
+:root {
+    --circle-color: var(--darkblue);
+}
+
+#landing-pg {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: var(--mono);
+    font-size: 16rem;
+    text-align: left;
+    margin: 0;
+    padding-top: 20rem;
+    padding-left: var(--margin);
+    letter-spacing: -2.5rem;
+    line-height: 18rem;
+}
+
+h2 span {
+    letter-spacing: -1rem;
+}
+
+h3 {
+    margin: 0;
+    font-size: 2.4rem;
+    margin-bottom: 0;
+    text-align: left;
+    color: white;
+    font-family: var(--mono);   
+}
+
+
+#page-container {
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contact-btns {
+    position: absolute;
+    left: 2rem;
+    top: calc(100vh - var(--margin) - 180px);
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--pink);
+    margin: 1rem;
+}
+
+/* TEXT COLORS */
+span {
+    background-color: none;
+    color: white;
+    transition: color 3s ease-out 1s;
+    height: auto;
+    cursor: cell;
+}
+
+.linebreak {
+    display: inline;
+}
+
+.secondlinebreak {
+    display: inline;
+}
+
+h2 span {
+    color: var(--blue);
+}
+
+h3 span {
+    color: white;
+}
+
+.subtitle-container {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.subtitle {
+    font-family: var(--mono);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--mint);
+    padding: 3rem;
+    padding-left: 0;
+    padding-top: 0;
+    margin: 0;
+    vertical-align: top;
+}
+
+.blue:hover {
+    transition: color 0s;
+    color: var(--blue) !important;
+}
+
+.pink:hover{
+    transition: color 0s;
+    color: var(--pink);
+}
+
+.purple:hover {
+    transition: color 0s;
+    color: var(--purple);
+}
+
+.mint:hover {
+    transition: color 0s;
+    color: var(--mint);
+}
+
+.red:hover {
+    transition: color 0s;
+    color: var(--red);
+}
+
+.circle {
+    background-color: transparent;
+    position: absolute;
+    transition: all .5s ease-in 0s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-family: var(--mono);
+    color: var(--circle-color);
+    font-weight: 700;
+    flex-wrap: nowrap;
+    cursor: pointer;
+}
+
+.circle:hover {
+    transform: scale(1.2);
+    border-color: var(--mint);
+    color: var(--blue);
+    font-size: 3rem;
+}
+
+.circle-container {
+    position: absolute;
+    top: 10vh;
+    left: 40vw;
+    width: 50vw;
+    height: 80vh;
+    transition: all 1s ease-in 0s;
+}
+
+
+#contact {
+    height: 20vh;
+    font-family: var(--mono);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--mint);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    column-gap: 2rem;
+}
+
+#contact a {
+    border-bottom: 1px solid var(--mint);
+}
+
+#contact div {
+    margin: 1rem;
+}
+#contact span {
+    color: var(--mint);
+}
+
+.proj-item:hover > .overlay {
+    opacity: 1;
+}
+
+.small-pt {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.medium-pt {
+    width: 2.5rem;
+    height: 2.5rem;
+    /* display: inline; */
+}
+
+.large-pt {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.star-s {
+    font-size: 1.8rem !important;
+}
+
+.star-m {
+    font-size: 2.5rem !important;
+}
+
+.star-l {
+    font-size: 3rem !important;
+}
+
+li:hover > .thumb {
+    opacity: 1;
+}
+
+.thumb {
+    height: 200px;
+    width: auto;
+    opacity: 0;
+    position: absolute;
+    top: -100px;
+    right: 2rem;
+    z-index: -10;
+    transition: all .25s linear 0s;
+    overflow: hidden;
+}
+
+@media (max-width: 1875px) {
+    .linebreak {
+        display: inline;
+    }
+}
+
+@media (max-width: 1550px) {
+    :root {
+        --circle-color: white;
+    }
+    .circle-container {
+        left: 20vw;
+        width: 100vw;
+    }
+    h1 span{
+        color: var(--darkblue);
+    }
+}
+
+@media (max-width: 1250px) {
+    .circle-container {
+        left: 20vw;
+        width: 70vw;
+    }
+    .circle:hover {
+        font-size: 2.2rem;
+    }
+    .circle {
+        font-size: 2rem;
+    }
+
+@media (max-width: 1000px) {
+    .circle-container {
+        left: var(--margin);
+    }
+    .about-text {
+        max-width: 90vw;
+    }
+}
+
+@media (max-width: 925px) {
+    .secondlinebreak {
+        display: inline;
+    }
+}
+
+@media (max-width: 750px) {
+    #contact {
+        height: 15vh;
+        font-size: 1.4rem;
+    }
+
+    #contact a {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        padding-top: 0;
+    }
+    .circle-container {
+        display: none;
+    }
+
+}
